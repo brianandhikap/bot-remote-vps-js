@@ -21,7 +21,7 @@ client.on('ready', () => {
 
 client.on('message', async (msg) => {
   const { from, body, author } = msg;
-  const sender = msg.fromMe ? allowedUser : (author || from); // author jika group, from jika personal
+  const sender = msg.fromMe ? allowedUser : (author || from);
 
   const isPrivateAllowed = from === allowedUser;
   const isGroupAllowed = from === allowedGroup && sender === allowedUser;
