@@ -23,6 +23,14 @@ client.on('message', async (msg) => {
   const { from, body, author } = msg;
   const sender = msg.fromMe ? allowedUser : (author || from);
 
+  console.log('📩 Incoming message:');
+  console.log(`From       : ${from}`);
+  console.log(`Author     : ${author}`);
+  console.log(`Sender used: ${sender}`);
+  console.log(`Body       : ${body}`);
+  console.log(`isGroup?   : ${msg.isGroupMsg}`);
+  console.log('====================');
+
   const isPrivateAllowed = from === allowedUser;
   const isGroupAllowed = from === allowedGroup && sender === allowedUser;
 
@@ -33,5 +41,4 @@ client.on('message', async (msg) => {
     msg.reply('Kamu siapa?');
   }
 });
-
 client.initialize();
