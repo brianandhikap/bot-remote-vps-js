@@ -58,7 +58,7 @@ function handleCommand(message, body, sendReply) {
   if (commandFn) {
     const command = commandFn();
     sendReply(`⏳ Menjalankan perintah: \`${body}\``);
-    
+
     if (body === '!status backend') {
       // Special handling for status to just extract the Active line
       exec(command, (error, stdout) => {
