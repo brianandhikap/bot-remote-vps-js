@@ -2,7 +2,7 @@ const { exec } = require('child_process');
 const { backendPath, serviceName } = require('./config');
 
 function executeCommand(command, callback) {
-  let timeout = 10000; // Default 10 seconds
+  let timeout = 10000;
   
   // Allow more time for build commands
   if (command.includes('npm run build')) {
