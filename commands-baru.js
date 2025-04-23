@@ -3,7 +3,7 @@ const { backendPath, serviceName } = require('./config');
 
 function executeCommand(command, callback) {
   let timeout = 10000;
-  
+
   if (command.includes('npm run build')) {
     timeout = 300000; // 5 minutes for build commands
   } else if (command.includes('npm install')) {
