@@ -65,7 +65,7 @@ function handleCommand(message, body, sendReply) {
           sendReply(`❌ Error mengambil status:\n${error ? error.message : 'Status tidak tersedia'}`);
           return;
         }
-        
+
         const statusLine = stdout.split('\n').find(line => line.trim().startsWith('Active:'));
         if (statusLine) {
           sendReply(`📦 ${statusLine.trim()}`);
