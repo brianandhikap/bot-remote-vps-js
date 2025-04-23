@@ -50,7 +50,7 @@ const commandMap = {
   '!stop backend': () => `sudo systemctl stop ${serviceName}`,
   '!start backend': () => `sudo systemctl start ${serviceName}`,
   '!install backend': () => `npm install`,
-  '!status backend': null, // Special case, handled differently
+  '!status backend': null,
 };
 
 function handleCommand(message, body, sendReply) {
