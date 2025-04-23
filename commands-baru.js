@@ -7,7 +7,7 @@ function executeCommand(command, callback) {
   if (command.includes('npm run build')) {
     timeout = 300000;
   } else if (command.includes('npm install')) {
-    timeout = 180000; // 3 minutes for install commands
+    timeout = 180000;
   }
 
   const proc = exec(command, { cwd: backendPath, timeout: timeout }, (error, stdout, stderr) => {
