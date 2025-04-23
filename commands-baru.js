@@ -60,7 +60,6 @@ function handleCommand(message, body, sendReply) {
     sendReply(`⏳ Menjalankan perintah: \`${body}\``);
 
     if (body === '!status backend') {
-      // Special handling for status to just extract the Active line
       exec(command, (error, stdout) => {
         if (error || !stdout) {
           sendReply(`❌ Error mengambil status:\n${error ? error.message : 'Status tidak tersedia'}`);
