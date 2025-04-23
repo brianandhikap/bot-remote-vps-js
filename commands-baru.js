@@ -75,7 +75,6 @@ function handleCommand(message, body, sendReply) {
         }
       });
     } else {
-      // Normal execution for other commands
       executeCommand(command, (result) => {
         if (body.includes('start') || body.includes('stop') || body.includes('restart')) {
           getServiceStatus((statusInfo) => {
