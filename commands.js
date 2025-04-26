@@ -5,7 +5,7 @@ function executeCommand(command, callback, directory = backendPath) {
   let timeout = 10000;
 
   if (command.includes('npm run build')) {
-    timeout = 300000; // 5 minutes for build commands
+    timeout = 300000;
   } else if (command.includes('npm install')) {
     timeout = 180000; // 3 minutes for install commands
   }
