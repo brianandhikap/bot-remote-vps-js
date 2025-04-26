@@ -1,5 +1,5 @@
 const { exec } = require('child_process');
-const { backendPath, serviceName } = require('./config');
+const { backendPath, serviceName, backendotpPath, serviceotpName } = require('./config');
 
 function executeCommand(command, callback) {
   const proc = exec(command, { cwd: backendPath, timeout: 10000 }, (error, stdout, stderr) => {
