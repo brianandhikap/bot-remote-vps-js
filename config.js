@@ -3,4 +3,6 @@ module.exports = {
   allowedGroup: 'ID_GROUPS@g.us',
   backendPath: 'DIR',
   serviceName: 'NAME_SERVICE',
+  backendotpPath: 'DIR2',
+  serviceotpName: 'NAME_SERVICE2',
 };
